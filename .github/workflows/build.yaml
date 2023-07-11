@@ -29,6 +29,7 @@ on:
           - dev
           - uat
           - prod
+
 env:
   CI: false
 concurrency:
@@ -110,6 +111,7 @@ jobs:
         env:
           REACT_APP_BACKEND_BASE_URL: ${{ secrets.REACT_APP_BACKEND_BASE_URL }}
         run: |
+          npm ci
           npm install
           npm run build
 
