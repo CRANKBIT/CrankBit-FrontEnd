@@ -5,23 +5,23 @@ import FeatureCard from './components/FeatureCard/FeatureCard'
 
 const cardData = [
   {
-    imgSrc: './svg/featureCardIcon1.svg',
+    imgSrc: '/svg/featureCardIcon1.svg',
     text: 'Easy Builder',
   },
   {
-    imgSrc: './svg/featureCardIcon2.svg',
+    imgSrc: '/svg/featureCardIcon2.svg',
     text: 'Easy Embed',
   },
   {
-    imgSrc: './svg/featureCardIcon3.svg',
+    imgSrc: '/svg/featureCardIcon3.svg',
     text: 'Export Responses',
   },
   {
-    imgSrc: './svg/featureCardIcon4.svg',
+    imgSrc: '/svg/featureCardIcon4.svg',
     text: 'Always on Cloud',
   },
   {
-    imgSrc: './svg/featureCardIcon5.svg',
+    imgSrc: '/svg/featureCardIcon5.svg',
     text: 'Instant Support',
   },
 ]

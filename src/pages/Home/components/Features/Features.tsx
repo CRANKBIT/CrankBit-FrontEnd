@@ -7,7 +7,7 @@ const Features: FC = () => (
     <div className="flex">
       <DisplayCards />
       <div className="flex flex-col justify-center">
-        <img src="./svg/featureImage.svg" alt="featureImage" />
+        <img src="/svg/featureImage.svg" alt="featureImage" />
       </div>
     </div>
   </div>

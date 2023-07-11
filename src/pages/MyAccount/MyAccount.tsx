@@ -15,16 +15,16 @@ const MyAccount: FC = () => (
         <h1>companylist</h1>
         <div className="flex gap-10">
           <Link to="/user/my-reports">
-            <img src="./svg/CompanyOne.png" alt="Company Logo" className="h-[100px] rounded-[100px]" />
+            <img src="/svg/CompanyOne.png" alt="Company Logo" className="h-[100px] rounded-[100px]" />
           </Link>
           <Link to="/user/my-reports">
-            <img src="./svg/CompanyOne.png" alt="Company Logo" className="h-[100px] rounded-[100px]" />
+            <img src="/svg/CompanyOne.png" alt="Company Logo" className="h-[100px] rounded-[100px]" />
           </Link>
           <Link to="/user/my-reports">
-            <img src="./svg/CompanyOne.png" alt="Company Logo" className="h-[100px] rounded-[100px]" />
+            <img src="/svg/CompanyOne.png" alt="Company Logo" className="h-[100px] rounded-[100px]" />
           </Link>
           <Link to="/user/my-reports">
-            <img src="./svg/CompanyOne.png" alt="Company Logo" className="h-[100px] rounded-[100px]" />
+            <img src="/svg/CompanyOne.png" alt="Company Logo" className="h-[100px] rounded-[100px]" />
           </Link>
         </div>
       </div>

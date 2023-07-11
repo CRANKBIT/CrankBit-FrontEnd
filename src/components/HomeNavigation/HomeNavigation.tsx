@@ -9,7 +9,7 @@ const HomeNavigation: FC = () => {
     <nav>
       <div className="flex justify-between pt-7 mx-[120px] text-white">
         <Link to="/" className="flex items-center gap-2 ">
-          <img width={32} src="./logo.svg" />
+          <img width={32} src="/logo.svg" />
           Report Builder
         </Link>
         <div className="flex gap-10 items-center">

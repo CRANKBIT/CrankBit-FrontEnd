@@ -9,7 +9,7 @@ interface Props {
 
 const FileLogo: FC<Props> = ({ children = null, className = undefined }) => (
   <Link to="/">
-    <img src="./logo.svg" className={classNames('text-primary', 'mx-auto', 'w-auto', className)} />
+    <img src="/logo.svg" className={classNames('text-primary', 'mx-auto', 'w-auto', className)} />
     {children}
   </Link>
 )

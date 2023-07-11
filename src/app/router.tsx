@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { createHashRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from '@/pages/Home'
 import SignUp from '@/pages/SignUp'
 import GetStarted from '@/pages/GetStarted'
@@ -19,7 +19,7 @@ import ForgotPassword from '@/pages/ForgotPassword'
 import AboutUs from '@/pages/AboutUs'
 import SetNewPassword from '@/pages/SetNewPassword/SetNewPassword'
 
-const router = createHashRouter([
+const routes = [
   {
     path: '/',
     element: <Home />,
@@ -92,7 +92,9 @@ const router = createHashRouter([
     path: '/about-us',
     element: <AboutUs />,
   },
-])
+]
+
+const router = createBrowserRouter(routes)
 
 const App: FC = () => <RouterProvider router={router} />
 

@@ -13,12 +13,12 @@ const PremiumList = [
 const DisplayPlans: FC = () => (
   <div className="flex justify-center">
     <div className="bg-white rounded-xl text-black mr-10">
-      <PlanCard icon="./svg/StarterIcon.svg" title="Starter">
+      <PlanCard icon="/svg/StarterIcon.svg" title="Starter">
         <div className="text-[#007AD3] text-3xl text-left font-bold">FREE</div>
         <ul className="list-none">
           {StarterList.map((item) => (
             <li key={item} className="my-10 text-black text-left">
-              <img className="inline mr-9" src="./svg/ListIconStarter.svg" alt="" />
+              <img className="inline mr-9" src="/svg/ListIconStarter.svg" alt="" />
               {item}
             </li>
           ))}
@@ -33,12 +33,12 @@ const DisplayPlans: FC = () => (
     </div>
 
     <div className="bg-primary text-white rounded-xl">
-      <PlanCard icon="./svg/PremiumIcon.svg" title="Premium">
+      <PlanCard icon="/svg/PremiumIcon.svg" title="Premium">
         <div className="text-white text-3xl text-left font-bold">$4.99/month</div>
         <ul className="list-none">
           {PremiumList.map((item) => (
             <li key={item} className="my-10 text-white text-left">
-              <img className="inline mr-9" src="./svg/ListIconPremium.svg" alt="" />
+              <img className="inline mr-9" src="/svg/ListIconPremium.svg" alt="" />
               {item}
             </li>
           ))}
