@@ -2,6 +2,8 @@ import { FC, useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Formik, Form } from 'formik'
 import { BsEyeSlashFill, BsEyeFill } from 'react-icons/bs'
+import { zxcvbn } from '@zxcvbn-ts/core'
+import classNames from 'classnames'
 import { useAppDispatch, useAppSelector } from '@/app/hooks'
 import { registerUser } from '@/features/auth/authSlice'
 import SignUpSchema from '@/schema/SignUp'
@@ -18,6 +20,7 @@ const CreateAccount: FC = () => {
 
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false)
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
+  const [passwordScore, setPasswordScore] = useState<number | null>(null)
 
   useEffect(() => {
     if (user) {
@@ -30,6 +33,24 @@ const CreateAccount: FC = () => {
 
     return undefined
   }, [user, navigate])
+
+  const getPasswordStrengthText = (pwd: string): string => {
+    const { score } = zxcvbn(pwd)
+    setPasswordScore(score)
+
+    switch (score) {
+      case 0:
+      case 1:
+        return 'weak'
+      case 2:
+      case 3:
+        return 'fair'
+      case 4:
+        return 'strong'
+      default:
+        return 'null'
+    }
+  }
 
   return (
     <AuthLayout>
@@ -46,7 +67,7 @@ const CreateAccount: FC = () => {
             setIsModalOpen(true)
           }}
         >
-          {({ isSubmitting, errors, touched, isValid }) => (
+          {({ isSubmitting, errors, touched, isValid, values }) => (
             <Form>
               <div className="text-2xl font-medium mb-5">Create Account</div>
 
@@ -75,6 +96,32 @@ const CreateAccount: FC = () => {
                   )}
                 </span>
                 {errors.password && touched.password && <div className="text-darkGray mt-1">{errors.password}</div>}
+                {values.password && (
+                  <div className="mt-2">
+                    <div
+                      className={classNames(
+                        'h-2 ease-in-out duration-300',
+                        passwordScore === 0 && 'bg-red-600 w-1/3',
+                        passwordScore === 1 && 'bg-red-600 w-1/3',
+                        passwordScore === 2 && 'bg-orange-400 w-2/3',
+                        passwordScore === 3 && 'bg-orange-400 w-2/3',
+                        passwordScore === 4 && 'bg-green-600'
+                      )}
+                    />
+                    <div
+                      className={classNames(
+                        'text-s mt-1',
+                        passwordScore === 0 && 'text-red-600',
+                        passwordScore === 1 && 'text-red-600',
+                        passwordScore === 2 && 'text-orange-400',
+                        passwordScore === 3 && 'text-orange-400',
+                        passwordScore === 4 && 'text-green-600'
+                      )}
+                    >
+                      {getPasswordStrengthText(values.password)}
+                    </div>
+                  </div>
+                )}
               </div>
 
               <Button

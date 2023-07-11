@@ -48,7 +48,7 @@ const ResetPassword: FC<Props> = ({ onClose = () => {} }) => {
   return (
     <AuthLayout>
       <div className="bg-userContent flex justify-center items-center w-full h-screen">
-        <div className='w-1/2'>
+        <div className="w-1/2">
           <div className="text-xl font-bold mb-5">Forgot Password?</div>
           <div className="font-bold text-gray mb-10">Please enter your email address to reset your password</div>
           <form onSubmit={handleSubmit}>
