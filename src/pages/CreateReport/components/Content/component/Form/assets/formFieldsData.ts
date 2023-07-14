@@ -1,7 +1,22 @@
 const formFields = [
   {
-    title: 'TOYOTA CAMRY 2021',
+    title: 'Vehicle Info',
     info: [
+      {
+        label: 'Year',
+        type: 'text',
+        placeholder: '2000',
+      },
+      {
+        label: 'Make',
+        type: 'text',
+        placeholder: 'Toyota',
+      },
+      {
+        label: 'Model',
+        type: 'text',
+        placeholder: 'Camry',
+      },
       {
         label: 'Rego',
         type: 'text',
@@ -20,7 +35,7 @@ const formFields = [
     ],
   },
   {
-    title: 'Owner',
+    title: 'Owner Info',
     info: [
       {
         label: 'First Name',

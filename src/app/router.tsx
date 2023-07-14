@@ -18,6 +18,7 @@ import ResetPassword from '@/pages/ResetPassword'
 import ForgotPassword from '@/pages/ForgotPassword'
 import AboutUs from '@/pages/AboutUs'
 import SetNewPassword from '@/pages/SetNewPassword/SetNewPassword'
+import ServiceItem from '@/pages/ServiceItem/ServiceItem'
 
 const router = createHashRouter([
   {
@@ -51,6 +52,10 @@ const router = createHashRouter([
   {
     path: '/user/my-reports/create-report',
     element: <CreateReport />,
+  },
+  {
+    path: '/user/my-reports/service-item',
+    element: <ServiceItem />,
   },
   {
     path: '/user/knowledge-base',
