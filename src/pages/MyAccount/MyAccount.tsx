@@ -21,9 +21,14 @@ const MyAccount: FC = () => (
         </div>
       </div>
       <div className="mt-10">
-        <div className='flex space-around bg-gray p-8'>
+        <div className="flex space-around bg-gray p-8">
           <h2 className="text-bold text-lg">CompanyList</h2>
-          <button type='button' className='bg-black w-[200px] h-[30px] text-white text-center ml-[500px] rounded-lg shadow-mb'>Add New Company</button>
+          <button
+            type="button"
+            className="bg-black w-[200px] h-[30px] text-white text-center ml-[500px] rounded-lg shadow-mb"
+          >
+            Add New Company
+          </button>
         </div>
 
         <div className="flex gap-10 bg-white shadow-md rounded-lg p-20">

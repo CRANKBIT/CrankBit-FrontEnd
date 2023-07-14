@@ -6,6 +6,7 @@ import Button from '@/components/Button'
 import ToggleButton from '@/components/ToggleButton'
 import ListView from './components/ListView'
 import CardView from './components/CardView'
+import DatePicker from './components/DatePicker/DatePicker'
 
 const Content: FC = () => {
   const navigate = useNavigate()
@@ -29,6 +30,8 @@ const Content: FC = () => {
             <input placeholder="Search.." className="focus:outline-none" />
             <CiSearch />
           </div>
+          <DatePicker />
+
           <div className="w-1/6 flex cursor-pointer text-3xl">
             <ToggleButton icon={AiOutlineAppstore} isActive={viewMode === 'card'} onClick={() => SetViewMode('card')} />
             <ToggleButton icon={AiOutlineMenu} isActive={viewMode === 'list'} onClick={() => SetViewMode('list')} />
